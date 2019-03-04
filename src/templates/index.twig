@@ -1,0 +1,39 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+    <title>Craft Pattern Library</title>
+</head>
+<body class="sans-serif">
+    <main class="bg-black-05 pa2 flex vh-100">
+        <section class="w-20">
+            <ul class="list">
+            {% for branchName, branch in componentTree %}
+                <li class="mb2">
+                    {{ branchName }}
+                    <ul class="list pt2">
+                    {% for component in branch %}
+                        {% if component is not iterable %}
+                            <li>
+                                <a href="{{ url('/craft-patlib/component/' ~ component) }}">{{ component }}</a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
+            </ul>
+        </section>
+
+        <section class="w-80 bg-white ba b--light-silver br2 pa3">
+            {% if component is defined %}
+                {{ component|raw }}
+            {% endif %}
+        </section>
+    </main>
+</body>
+</html>

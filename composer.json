@@ -1,0 +1,38 @@
+{
+    "name": "floriskoch/craft-patlib",
+    "description": "CraftCMS Pattern Library",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "pattern library"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Floris S. Koch",
+            "homepage": "https://floriskoch.com"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1",
+        "grrr-amsterdam/garp-functional": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+          "floriskoch\\craftpatlib\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Craft Patlib",
+        "handle": "craft-patlib",
+        "developer": "Floris S. Koch",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "???",
+        "class": "floriskoch\\craftpatlib\\CraftPatlib"
+    }
+}
