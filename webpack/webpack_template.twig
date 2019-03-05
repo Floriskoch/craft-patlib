@@ -36,8 +36,8 @@
     </section>
 </main>
 
-
-<script src="http://localhost:8080/js/main.js"></script>
-
+<% if (htmlWebpackPlugin.options.devServer) { %>
+<script src="<%= htmlWebpackPlugin.options.devServer%>js/main.js"></script>
+<% } %>
 </body>
 </html>
