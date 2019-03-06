@@ -15,36 +15,22 @@
   },
   "homepage": "https://github.com/Floriskoch/craft-patlib#readme",
   "scripts": {
-    "dev": "webpack-dev-server --env.development --mode=development --config=webpack.config.js",
-    "webpack": "webpack --config=webpack.config.js --env.development --mode=development",
-    "production": "webpack --hide-modules --config=webpack.config.js --env.production --mode=production",
-    "test": "jest",
-    "webpack:analyze": "webpack-bundle-analyzer webpack/stats.json src/assetbundles/gonzo/dist/"
+    "start": "webpack-dev-server --mode development --open --hot",
+    "build": "./node_modules/.bin/webpack --mode production"
   },
   "dependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.4",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-plugin-transform-strict-mode": "^6.24.1",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
-    "clean-webpack-plugin": "^0.1.19",
-    "html-loader": "^0.5.5",
-    "html-webpack-plugin": "^3.2.0",
-    "prop-types": "^15.6.1",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
-    "webpack": "^4.8.0",
-    "webpack-dev-server": "^3.1.4"
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
   },
   "devDependencies": {
-    "eslint-loader": "^2.1.2",
-    "extract-text-webpack-plugin": "^3.0.2",
-    "html-webpack-harddisk-plugin": "^1.0.1",
-    "webpack-bundle-analyzer": "^3.1.0",
-    "webpack-cli": "^3.0.0",
-    "webpack-config-utils": "^2.3.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.1",
     "webpack-stylish": "^0.1.8"
   }
 }

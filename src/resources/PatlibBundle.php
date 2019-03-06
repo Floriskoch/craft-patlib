@@ -10,17 +10,12 @@ class PatlibBundle extends AssetBundle
     public function init()
     {
         // define the path that your publishable resources live
-        $this->sourcePath = '@floriskoch/craftpatlib/resources';
-
-        // define the dependencies
-        $this->depends = [
-            CpAsset::class,
-        ];
+        $this->sourcePath = '@floriskoch/craftpatlib/resources/dist';
 
         // define the relative path to CSS/JS files that should be registered with the page
         // when this asset bundle is registered
         $this->js = [
-            'index.js',
+            'main.js',
         ];
 
 //        $this->css = [

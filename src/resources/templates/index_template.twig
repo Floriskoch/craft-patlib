@@ -14,11 +14,13 @@
     <div id="root"></div>
 </main>
 
-
-    
-        <script src="http://localhost:8080/src/resources/dist/main.js"></script>
-    
-
+<% if(htmlWebpackPlugin.options.environment === 'production') { %>
+    <script src="{{ view.getAssetManager().getPublishedUrl('@floriskoch/craftpatlib/resources/dist') }}/main.js"></script>
+<% } else { %>
+    <% if (htmlWebpackPlugin.options.devServer) { %>
+        <script src="<%= htmlWebpackPlugin.options.devServer%>src/resources/dist/main.js"></script>
+    <% } %>
+<% } %>
 
 </body>
 </html>

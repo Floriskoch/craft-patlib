@@ -1,5 +1,5 @@
 {# @var craft \craft\web\twig\variables\CraftVariable #}
-
+{% do view.registerAssetBundle("floriskoch\\craftpatlib\\resources\\PatlibBundle") %}
 <html>
 <head>
     <meta charset="UTF-8">
@@ -36,8 +36,6 @@
     </section>
 </main>
 
-
-<script src="http://localhost:8080/js/main.js"></script>
-
+<script src="{{ view.getAssetManager().getPublishedUrl('@floriskoch/craftpatlib/resources/dist') }}/main.js"></script>
 </body>
 </html>
